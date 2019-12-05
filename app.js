@@ -14,7 +14,7 @@ const argv = yargs
             .argv;
 
 const geocode = require('./geocode/geocode');
-const darksky = require('./darksky/darksky');
+const weather = require('./weather/weather');
 
 console.log(argv);
 
@@ -28,7 +28,7 @@ geocode.geocodeAddress(encodedAddress, (errMessage, results) => {
         console.log(JSON.stringify(results, undefined, 2));
         let coordinates = results;
 
-        darksky.darkskyTemperature(coordinates, (errMessage, results) => {
+        weather.getWeather(coordinates, (errMessage, results) => {
             if(errMessage) {
                 console.log(errMessage);
             } else if(results) {

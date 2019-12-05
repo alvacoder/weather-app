@@ -1,6 +1,6 @@
 const request = require('request');
 
-let darkskyTemperature = (coordinates, callback) => {
+let getWeather = (coordinates, callback) => {
     request({
         url: `https://api.darksky.net/forecast/25b83edc2b3fb0e4efc4443331813854/${coordinates.Latitude},${coordinates.Longitude}`,
         json: true
@@ -15,4 +15,4 @@ let darkskyTemperature = (coordinates, callback) => {
     });
 };
 
-module.exports.darkskyTemperature = darkskyTemperature;
+module.exports.getWeather = getWeather;
