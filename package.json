@@ -10,6 +10,7 @@
   "author": "Idris Adeniji",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "yargs": "^15.0.2"
   }
 }
